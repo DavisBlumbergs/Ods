@@ -13,43 +13,70 @@ h1, h2, h3, p
   font-family: var(--ff-accent)
 
 h2, h3, p 
-  margin-bottom: 1em
+  margin-bottom: .5em
 
+.mobileView mat-grid-tile
+  color: white
+  text-align: center
+  letter-spacing: 1px
 
+.mobileView mat-card
+  background: #391313
+  color: white
+  text-align: center
+  min-width: 50vh
+  height: 31vh
 
+.mobileView mat-card-title
+  padding-bottom: .5rem
+  padding-top: .5rem
+
+.mobileView .danger 
+  border-color: #E91313
+  color: red
+  width: 40%
+  height: 30%
+  font-size: 1rem
+  border-radius: 0
+
+.mobileView .danger:hover
+    background: #E91313
+    color: white
+
+.mobileView mat-card-subtitle
+  padding-bottom: .15rem
+  &:last-child
+    padding-bottom: 0
   
-  
-  
-  
-//DESKTOP'ish  
-// #date
-//   background: #4D3D3D
 
-// #event
-//   background: #391313
 
-// mat-grid-tile
-//   color: white
-//   text-align: center
-//   letter-spacing: 2px
+//Bigger View
 
-//   &:first-child
-//     border-top-left-radius: 3px
-//     border-bottom-left-radius: 3px
+#date
+  background: #4D3D3D
 
-//   &:last-child
-//     border-top-right-radius: 3px
-//     border-bottom-right-radius: 3px
+#event
+  background: #391313
 
-// mat-grid-list
-//   &:last-child
-//     margin-bottom: 0px
+mat-grid-tile
+  color: white
+  text-align: center
+  letter-spacing: 2px
 
-//   margin-bottom: 3px
+  &:first-child
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
 
-// .container
-//   padding-top: 25px
-//   padding-bottom: 25px
+  &:last-child
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
 
-// .events 
-//   background: black  
+mat-grid-list
+  &:last-child
+    margin-bottom: 0px
+
+  margin-bottom: 3px
+
+.container
+  padding-top: 1.5rem
+  padding-bottom: 1.5rem 

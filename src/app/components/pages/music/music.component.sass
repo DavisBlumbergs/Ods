@@ -1,7 +1,21 @@
 .music 
     background: black
+    margin: 0
+    min-height: 90vh
+    padding-top: 1.5rem
+    padding-bottom: 1.5rem
 
-mat-grid-tile
+h1, h2, h3, p 
+  margin: 0
+  letter-spacing: 1px
+  colour: white
+  font-weight: 900
+  font-family: var(--ff-accent)
+
+h2, h3, p 
+  margin-bottom: .5em
+
+.biggerView mat-grid-tile
     img
         width: 550px
 
@@ -14,19 +28,76 @@ mat-grid-tile
         letter-spacing: 0.5px
 
 
-#platformIcons
+.biggerView #platformIcons
     img
         max-width: 100px
 
 
-.danger 
+.biggerView .danger 
     border-color: #E91313
     color: red
     width: 25%
     height: 25%
-    font-size: 24px
+    font-size: 1.5rem
     border-radius: 0
 
-.danger:hover
+.biggerView .danger:hover
     background: #E91313
     color: white
+
+.biggerView .cover img
+    min-width: 30vw
+    max-width: 70vw
+
+.biggerView mat-card-actions img
+    max-width: 4rem
+    &:first-child
+        margin-right: 1rem
+    &:last-child
+        margin-left: 1rem
+
+.biggerView mat-card
+    color: white
+    text-align: center
+
+.mobileView .cover img
+    min-width: 30vw
+    max-width: 70vw
+
+.biggerView .danger 
+    border-color: #E91313
+    color: red
+    width: 25vw
+    height: 8vh
+    font-size: 1rem
+    border-radius: 0
+
+.biggerView .danger:hover
+    background: #E91313
+    color: white
+
+
+.mobileView mat-card-actions img
+    max-width: 4rem
+    &:first-child
+        margin-right: 1rem
+    &:last-child
+        margin-left: 1rem
+
+.mobileView mat-card
+    color: white
+    text-align: center
+
+
+.mobileView .danger 
+    border-color: #E91313
+    color: red
+    width: 20vw
+    height: 8vh
+    font-size: 1rem
+    border-radius: 0
+
+.mobileView .danger:hover
+    background: #E91313
+    color: white
+
