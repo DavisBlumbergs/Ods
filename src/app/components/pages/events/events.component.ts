@@ -55,11 +55,13 @@ export class EventsComponent implements OnInit {
 
       if (breakpoints[Breakpoints.TabletPortrait]) {
         this.cols = this.gridByBreakpoint.sm 
+        this.hideMobileView = false
         console.log("screens matches TabletPortrait");
         console.log(this.cols)
       }
       else if (breakpoints[Breakpoints.TabletLandscape]) {
         this.cols = this.gridByBreakpoint.md
+        this.hideMobileView = true
         console.log("screens matches TabletLandscape");
         console.log(this.cols)
       }

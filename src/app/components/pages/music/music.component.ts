@@ -28,18 +28,21 @@ export class MusicComponent implements OnInit {
       Breakpoints.TabletPortrait,
       Breakpoints.TabletLandscape,
       Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait])
+      Breakpoints.HandsetPortrait,
+      Breakpoints.WebPortrait,
+      Breakpoints.WebLandscape])
     .subscribe(result => {
       const breakpoints = result.breakpoints;
       this.hideMobileView = true
 
       if (breakpoints[Breakpoints.TabletPortrait]) {
         this.cols = this.gridByBreakpoint.sm 
+        this.hideMobileView = false
         console.log("screens matches TabletPortrait");
         console.log(this.cols)
       }
       else if (breakpoints[Breakpoints.TabletLandscape]) {
-        this.cols = this.gridByBreakpoint.md
+        this.cols = this.gridByBreakpoint.sm
         console.log("screens matches TabletLandscape");
         console.log(this.cols)
       }
@@ -53,6 +56,18 @@ export class MusicComponent implements OnInit {
         this.hideMobileView = false
         this.cols = this.gridByBreakpoint.xs
         console.log("screens matches HandsetPortrait");
+        console.log(this.cols)
+      }
+      else if (breakpoints[Breakpoints.WebPortrait]) {
+        this.hideMobileView = true
+        this.cols = this.gridByBreakpoint.xs
+        console.log("screens matches WebPortrait");
+        console.log(this.cols)
+      }
+      else if (breakpoints[Breakpoints.WebLandscape]) {
+        this.hideMobileView = true
+        this.cols = this.gridByBreakpoint.sm
+        console.log("screens matches WebLandscape");
         console.log(this.cols)
       }
 
