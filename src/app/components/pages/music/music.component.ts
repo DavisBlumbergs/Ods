@@ -1,6 +1,15 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
+export interface Music {
+  title: string;
+  coverPhoto: string;
+  merchUrl: string;
+  youtubeUrl: string;
+  spotifyUrl: string;
+  soundcloudUrl: string;
+}
+
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
@@ -19,6 +28,17 @@ export class MusicComponent implements OnInit {
     sm: 2,
     xs: 1
   }
+
+  musicList: Music[] = [
+    {title: 'Nestāsti Mammai', coverPhoto: '../../../../assets/images/Nestasti_Mammai_Cover3.jpg', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Piepist Seju', coverPhoto: '../../../../assets/images/Piepist_Seju_Cover.jpg', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Buļļu Gaļa', coverPhoto: '../../../../assets/images/Goda_Vards_4_Cover.jpg', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Augusts', coverPhoto: '../../../../assets/images/Nestasti_Mammai_Cover2.jpg', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Augusts', coverPhoto: '../../../../assets/images/Bullu_Gala_Cover.jpg', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Augusts', coverPhoto: '', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Augusts', coverPhoto: '', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+    {title: 'Augusts', coverPhoto: '', merchUrl: 'Baldones Festivals', youtubeUrl: 'Main Stage', spotifyUrl: '',soundcloudUrl:''},
+  ]
 
   constructor(private responsive: BreakpointObserver) { }
 
