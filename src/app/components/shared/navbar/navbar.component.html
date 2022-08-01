@@ -1,30 +1,77 @@
 <nav class="navbar-dark bg-black sticky-top">
-    <div class="d-flex justify-content-around">
 
-        <div class="navbar-nav mr-auto align-self-center">
-            <div class="nav-item"> 
-                <a class="nav-link info-link font-weight-bold">SHOP</a> 
-            </div>
-            <div class="nav-item">
-                <a class="nav-link info-link font-weight-bold" [routerLink]="['/events']">EVENTS</a> 
-            </div>
-            <div class="nav-item"> 
-                <a class="nav-link info-link font-weight-bold" [routerLink]="['/music']">MUSIC</a> 
-            </div>
-        </div>
+    <div class="mobileView" *ngIf="!hideMobileView">
+        <mat-grid-list class="navbar-nav" cols="3">
+            <mat-grid-tile class="nav-item" colspan="1">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+                aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="align-self-center">
-            <a class="navbar-brand" [routerLink]="['/home']" href="#">
-                <img src="../../../../assets/images/background/Ods_Logo.png" alt="">
-            </a>
-        </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent15">
 
-        <div class="navbar-nav mr-auto align-self-center">
-            <a class="nav-item" href="#">
-                <i class="nav-link info-link bi bi-cart4"></i>
-            </a>
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                        <a class="nav-link info-link font-weight-bold">SHOP</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link info-link font-weight-bold" [routerLink]="['/events']">EVENTS</a> 
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link info-link font-weight-bold" [routerLink]="['/music']">MUSIC</a> 
+                      </li>
+                    </ul>
+                    <!-- Links -->
+                
+                  </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+                <a class="navbar-brand" [routerLink]="['/home']" href="#">
+                    <img src="../../../../assets/images/background/Ods_Logo.png" alt="">
+                </a>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+                <a class="nav-item" href="#">
+                    <i class="nav-link info-link bi bi-cart4"></i>
+                </a>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div class="biggerView" *ngIf="hideMobileView">
+
+        <div class="d-flex justify-content-around">
+
+            <div class="navbar-nav mr-auto align-self-center">
+                <div class="nav-item"> 
+                    <a class="nav-link info-link font-weight-bold">SHOP</a> 
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link info-link font-weight-bold" [routerLink]="['/events']">EVENTS</a> 
+                </div>
+                <div class="nav-item"> 
+                    <a class="nav-link info-link font-weight-bold" [routerLink]="['/music']">MUSIC</a> 
+                </div>
+            </div>
+    
+            <div class="align-self-center">
+                <a class="navbar-brand" [routerLink]="['/home']" href="#">
+                    <img src="../../../../assets/images/background/Ods_Logo.png" alt="">
+                </a>
+            </div>
+    
+            <div class="navbar-nav mr-auto align-self-center">
+                <a class="nav-item" href="#">
+                    <i class="nav-link info-link bi bi-cart4"></i>
+                </a>
+            </div>
+    
         </div>
 
     </div>
+
+
+
 
 </nav>

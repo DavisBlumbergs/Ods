@@ -60,7 +60,7 @@ export class MusicComponent implements OnInit {
       }
       else if (breakpoints[Breakpoints.WebPortrait]) {
         this.hideMobileView = true
-        this.cols = this.gridByBreakpoint.xs
+        this.cols = this.gridByBreakpoint.sm
         console.log("screens matches WebPortrait");
         console.log(this.cols)
       }

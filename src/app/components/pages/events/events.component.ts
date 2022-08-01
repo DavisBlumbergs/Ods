@@ -66,8 +66,8 @@ export class EventsComponent implements OnInit {
         console.log(this.cols)
       }
       else if (breakpoints[Breakpoints.HandsetLandscape]) {
-        this.hideMobileView = false
-        this.cols = this.gridByBreakpoint.sm
+        this.hideMobileView = true
+        this.cols = this.gridByBreakpoint.md
         console.log("screens matches HandsetLandscape");
         console.log(this.cols)
       }

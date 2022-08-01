@@ -10,3 +10,9 @@ npm install bootstrap bootstrap-icons
 
     - Angular Material
 ng add @angular/material
+
+
+
+Next Thing To Do :
+    navbar
+    carousel
