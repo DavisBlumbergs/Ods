@@ -39,16 +39,23 @@
 
                 <mat-card>
 
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h4>{{music.title}}</h4>
+                        </mat-card-title>
+                    </mat-card-header>
+
                     <mat-card-header class="">
+
                         <mat-card-title>
                             <h4>Listen Now On All Streaming Platforms</h4>
                         </mat-card-title>
                     </mat-card-header>
       
                     <mat-card-actions>
-                        <img src="../../../../assets/images/icons/YouTube_Icon.png" alt="">
-                        <img src="../../../../assets/images/icons/Spotify_Icon.png" alt="">
-                        <img src="../../../../assets/images/icons/Soundcloud_Icon.png" alt="">
+                        <a href="{{music.youtubeUrl}}" target="_blank"> <img src="../../../../assets/images/icons/YouTube_Icon.png" alt=""> </a>
+                        <a href="{{music.spotifyUrl}}" target="_blank" *ngIf="music.spotifyUrl !== ''"> <img src="../../../../assets/images/icons/Spotify_Icon.png" alt=""> </a>
+                        <a href="{{music.soundcloudUrl}}" target="_blank" *ngIf="music.soundcloudUrl !== ''"> <img src="../../../../assets/images/icons/Soundcloud_Icon.png" alt=""> </a>
                     </mat-card-actions>
     
                     <mat-card-actions>
