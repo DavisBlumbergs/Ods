@@ -3,13 +3,34 @@
     <div class="mobileView" *ngIf="!hideMobileView">
         <mat-grid-list class="navbar-nav" cols="3">
             <mat-grid-tile class="nav-item" colspan="1">
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-                aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+                <button mat-button class="menu-button navbar-toggler" (click)="sidenav.toggle()">
+                    <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+                <mat-sidenav-container class="sidenav-container">
+                    <<mat-sidenav 
+                        #sidenav 
+                        autoFocus="false" 
+                        mode="over" 
+                        [(opened)]="isMenuOpen" 
+                        class="sidenav" 
+                        (click)="onSidenavClick()"
+                    >
+                    <a mat-button class="nav-link info-link font-weight-bold">SHOP</a>
+                    <a mat-button class="nav-link info-link font-weight-bold" [routerLink]="['/events']">EVENTS</a> 
+                    <a mat-button class="nav-link info-link font-weight-bold" [routerLink]="['/music']">MUSIC</a> 
+                    <a mat-button routerLink="/page4">Page 4</a>
+                      <a mat-button routerLink="/page5">Page 5</a>
+                    </mat-sidenav>
+                    <mat-sidenav-content>
+                      <main>
+                        <router-outlet></router-outlet>
+                      </main>
+                    </mat-sidenav-content>
+                </mat-sidenav-container>
+
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent15">
 
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item">
@@ -23,7 +44,7 @@
                       </li>
                     </ul>
                 
-                  </div>
+                  </div> -->
             </mat-grid-tile>
             <mat-grid-tile colspan="1">
                 <a class="navbar-brand" [routerLink]="['/home']" href="#">
@@ -69,8 +90,5 @@
         </div>
 
     </div>
-
-
-
 
 </nav>

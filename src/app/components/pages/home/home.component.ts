@@ -1,5 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+
+  public isMenuOpen: boolean = false;
+
+  public onSidenavClick(): void {
+    this.isMenuOpen = false;
+  }
+
+  @ViewChild(MatMenuTrigger)
+  trigger!: MatMenuTrigger;
+
+  someMethod() {
+    this.trigger.openMenu();
+  }
 
   hideMobileView = true
 
