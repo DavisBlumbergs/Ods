@@ -1,39 +1,82 @@
 <footer class="navbar-dark d-flex flex-column" id="footer">
-    <div class="d-flex justify-content-around">
 
-        <div class="navbar-nav align-self-center">
-            <div class="nav-item"> <i class="nav-link info-link bi bi-facebook"></i> </div>
-            <div class="nav-item"> <i class="nav-link info-link bi bi-instagram"></i> </div>
-            <div class="nav-item"> <i class="nav-link info-link bi bi-youtube"></i> </div>
-            <div class="nav-item"> <i class="nav-link info-link bi bi-spotify"></i> </div>
+    <div class="mobileView" *ngIf="!hideMobileView">
+        <div class="d-flex justify-content-around">
+    
+            <div class="navbar-nav flex-column">
+                
+                <div class="navbar-nav align-self-center">
+                    <div class="nav-item"> <a href="https://www.facebook.com/Odinjsh" target="_blank"><i class="nav-link info-link bi bi-facebook"></i> </a></div>
+                    <div class="nav-item"> <a href="https://www.instagram.com/odapriekam/" target="_blank"><i class="nav-link info-link bi bi-instagram"></i></a> </div>
+                    <div class="nav-item"> <a href="https://www.youtube.com/channel/UCjWiU8j3PNYPwTPHA7Y-1eQ" target="_blank"><i class="nav-link info-link bi bi-youtube"></i></a> </div>
+                    <div class="nav-item"> <a href="https://open.spotify.com/artist/1tyZ7Tmc3dC2eGKsEa19Ev" target="_blank"><i class="nav-link info-link bi bi-spotify"></i> </a></div>
+                </div>
+
+                <div class="nav-item"> 
+                    <p>© 2022 Official Ods Online Store. All Rights Reserved.</p>
+                </div>
+                <div class="nav-item align-self-center"> 
+                    <p class="nav-link" style="font-size: 10px;">Developed by Dave</p>
+                </div>
+                <div class="navbar-nav align-self-center">
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/contactus']">Contact Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold">FAQs</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold">Terms</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/privacy']">Privacy</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold">Cookie Choices</a>
+                    </div>
+                </div>
+    
+            </div>
         </div>
-
-        <div class="navbar-nav flex-column">
-            <div class="nav-item"> 
-                <p>© 2022 Official Ods Online Store. All Rights Reserved.</p>
-            </div>
-            <div class="nav-item align-self-center"> 
-                <p class="nav-link" style="font-size: 10px;">Developed by Dave</p>
-            </div>
-            <div class="navbar-nav align-self-center">
-                <div class="nav-item">
-                    <a href="" class="nav-link info-link font-weight-bold">Contact Us</a>
-                </div>
-                <div class="nav-item">
-                    <a href="" class="nav-link info-link font-weight-bold">FAQs</a>
-                </div>
-                <div class="nav-item">
-                    <a href="" class="nav-link info-link font-weight-bold">Terms</a>
-                </div>
-                <div class="nav-item">
-                    <a href="" class="nav-link info-link font-weight-bold">Privacy</a>
-                </div>
-                <div class="nav-item">
-                    <a href="" class="nav-link info-link font-weight-bold">Cookie Choices</a>
-                </div>
-            </div>
-
-        </div>
-
     </div>
+
+    <div class="biggerView" *ngIf="hideMobileView">
+        <div class="d-flex justify-content-around">
+
+            <div class="navbar-nav align-self-center">
+                <div class="nav-item"> <a href="https://www.facebook.com/Odinjsh" target="_blank"><i class="nav-link info-link bi bi-facebook"></i> </a></div>
+                <div class="nav-item"> <a href="https://www.instagram.com/odapriekam/" target="_blank"><i class="nav-link info-link bi bi-instagram"></i></a> </div>
+                <div class="nav-item"> <a href="https://www.youtube.com/channel/UCjWiU8j3PNYPwTPHA7Y-1eQ" target="_blank"><i class="nav-link info-link bi bi-youtube"></i></a> </div>
+                <div class="nav-item"> <a href="https://open.spotify.com/artist/1tyZ7Tmc3dC2eGKsEa19Ev" target="_blank"><i class="nav-link info-link bi bi-spotify"></i> </a></div>
+            </div>
+    
+            <div class="navbar-nav flex-column">
+                <div class="nav-item"> 
+                    <p>© 2022 Official Ods Online Store. All Rights Reserved.</p>
+                </div>
+                <div class="nav-item align-self-center"> 
+                    <p class="nav-link" style="font-size: 10px;">Developed by Dave</p>
+                </div>
+                <div class="navbar-nav align-self-center">
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/contactus']">Contact Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/FAQs']">FAQs</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/Terms']">Terms</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/privacy']">Privacy</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="" class="nav-link info-link font-weight-bold" [routerLink]="['/Cookie']">Cookie Choices</a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
 </footer>
