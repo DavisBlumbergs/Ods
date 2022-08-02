@@ -1,37 +1,5 @@
 <div class="music">
 
-    <!-- <div class="biggerView" *ngIf="hideMobileView">
-        <mat-grid-list cols="12" rowHeight="100px">
-
-            <mat-grid-tile colspan="6" rowspan="6">
-                <img src="../../../../assets/images/Nestasti_Mammai_Cover.jpg" alt="">
-            </mat-grid-tile>
-
-            <mat-grid-tile colspan="6" rowspan="1">
-                <h1>Nestāsti Mammai</h1>
-            </mat-grid-tile>
-
-            <mat-grid-tile colspan="6" rowspan="2">
-                <h4>Listen Now On All Streaming Platforms</h4>
-            </mat-grid-tile>
-
-            <mat-grid-tile colspan="2" id="platformIcons">
-                <img src="../../../../assets/images/icons/YouTube_Icon.png" alt="">
-            </mat-grid-tile>
-            <mat-grid-tile colspan="2" id="platformIcons">
-                <img src="../../../../assets/images/icons/Spotify_Icon.png" alt="">
-            </mat-grid-tile>
-            <mat-grid-tile colspan="2" id="platformIcons">
-                <img src="../../../../assets/images/icons/Soundcloud_Icon.png" alt="">
-            </mat-grid-tile>
-
-            <mat-grid-tile colspan="6" rowspan="2">
-                <button class="btn danger">Shop Merch</button>
-            </mat-grid-tile>
-
-        </mat-grid-list>
-    </div> -->
-
     <div class="biggerView" *ngIf="hideMobileView">
         <mat-grid-list cols="{{cols}}" rowHeight="85vh" *ngFor="let music of musicList">
             <mat-grid-tile colspan="1" class="cover"><img src="{{music.coverPhoto}}" alt=""></mat-grid-tile>
@@ -39,14 +7,10 @@
 
                 <mat-card>
 
-                    <mat-card-header>
+                    <mat-card-header class="">
                         <mat-card-title>
                             <h4>{{music.title}}</h4>
                         </mat-card-title>
-                    </mat-card-header>
-
-                    <mat-card-header class="">
-
                         <mat-card-title>
                             <h4>Listen Now On All Streaming Platforms</h4>
                         </mat-card-title>
@@ -95,6 +59,4 @@
         </div>
     </div>
     
-
-
 </div>

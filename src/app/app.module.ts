@@ -13,6 +13,8 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { EventsComponent } from './components/pages/events/events.component';
 import { MusicComponent } from './components/pages/music/music.component';
 import { CarouselComponent } from './components/pages/home/carousel/carousel.component';
+import { PrivacyComponent } from './components/pages/static/privacy/privacy.component';
+import { ContactusComponent } from './components/pages/static/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CarouselComponent } from './components/pages/home/carousel/carousel.com
     HomeComponent,
     EventsComponent,
     MusicComponent,
-    CarouselComponent
+    CarouselComponent,
+    PrivacyComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

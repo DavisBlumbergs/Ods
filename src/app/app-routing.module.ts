@@ -4,7 +4,8 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { EventsComponent } from './components/pages/events/events.component';
 import { MusicComponent } from './components/pages/music/music.component';
-import { ApplicationStateService } from './services/application-state.service';
+import { PrivacyComponent } from './components/pages/static/privacy/privacy.component';
+import { ContactusComponent } from './components/pages/static/contactus/contactus.component';
 
 
 const desktop_routes: Routes = [
@@ -13,6 +14,8 @@ const desktop_routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'events', component: EventsComponent},
   {path: 'music', component: MusicComponent},
+  {path: 'privacy', component: PrivacyComponent},
+  {path: 'contactus', component: ContactusComponent},
 
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
   
@@ -24,6 +27,8 @@ const mobile_routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'events', component: EventsComponent},
   {path: 'music', component: MusicComponent},
+  {path: 'privacy', component: PrivacyComponent},
+  {path: 'contactus', component: ContactusComponent},
 
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
   
@@ -35,12 +40,8 @@ const mobile_routes: Routes = [
 })
 export class AppRoutingModule {
 
-  public constructor(private router: Router,
-    private applicationStateService: ApplicationStateService) {
+  public constructor() {
 
-    if (applicationStateService.getIsMobileResolution()) {
-      router.resetConfig(mobile_routes);
-    }
   }
 
  }
