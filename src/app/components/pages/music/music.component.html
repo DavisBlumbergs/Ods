@@ -1,18 +1,18 @@
 <div class="music">
 
     <div class="biggerView" *ngIf="hideMobileView">
-        <mat-grid-list cols="{{cols}}" rowHeight="85vh" *ngFor="let music of musicList">
+        <mat-grid-list cols="{{cols}}" rowHeight="70vh" *ngFor="let music of musicList">
             <mat-grid-tile colspan="1" class="cover"><img src="{{music.coverPhoto}}" alt=""></mat-grid-tile>
             <mat-grid-tile colspan="1">
 
-                <mat-card>
+                <mat-card> 
 
                     <mat-card-header class="">
                         <mat-card-title>
                             <h4>{{music.title}}</h4>
                         </mat-card-title>
                         <mat-card-title>
-                            <h4>Listen Now On All Streaming Platforms</h4>
+                            <h4>Listen Now On These Streaming Platforms</h4>
                         </mat-card-title>
                     </mat-card-header>
       
@@ -23,7 +23,7 @@
                     </mat-card-actions>
     
                     <mat-card-actions>
-                        <button class="btn danger">Shop Merch</button>
+                        <a href="{{music.merchUrl}}" target="_blank" *ngIf="music.merchUrl !== ''"> <button class="btn danger">Shop Merch</button> </a>
                     </mat-card-actions>
                     
                 </mat-card>
@@ -33,24 +33,24 @@
 
     <div class="container">
         <div class="mobileView" *ngIf="!hideMobileView">
-            <mat-grid-list cols="{{cols}}" rowHeight="50vh" *ngFor="let music of musicList">
+            <mat-grid-list cols="{{cols}}" rowHeight="30vh" *ngFor="let music of musicList">
                 <mat-grid-tile colspan="1" class="cover"><img src="{{music.coverPhoto}}" alt=""></mat-grid-tile>
                 <mat-grid-tile colspan="1">
     
                     <mat-card>
     
                         <mat-card-header class="">
-                          <mat-card-title><h4>Listen Now On All Streaming Platforms</h4></mat-card-title>
+                          <mat-card-title><h4>Listen Now On These Streaming Platforms</h4></mat-card-title>
                         </mat-card-header>
           
                         <mat-card-actions>
-                            <img src="../../../../assets/images/icons/YouTube_Icon.png" alt="">
-                            <img src="../../../../assets/images/icons/Spotify_Icon.png" alt="">
-                            <img src="../../../../assets/images/icons/Soundcloud_Icon.png" alt="">
+                            <a href="{{music.youtubeUrl}}" target="_blank"> <img src="../../../../assets/images/icons/YouTube_Icon.png" alt=""> </a>
+                            <a href="{{music.spotifyUrl}}" target="_blank" *ngIf="music.spotifyUrl !== ''"> <img src="../../../../assets/images/icons/Spotify_Icon.png" alt=""> </a>
+                            <a href="{{music.soundcloudUrl}}" target="_blank" *ngIf="music.soundcloudUrl !== ''"> <img src="../../../../assets/images/icons/Soundcloud_Icon.png" alt=""> </a>
                         </mat-card-actions>
     
                         <mat-card-actions>
-                            <button class="btn danger">Shop Merch</button>
+                            <a href="{{music.merchUrl}}" target="_blank" *ngIf="music.merchUrl !== ''"> <button class="btn danger">Shop Merch</button> </a>
                         </mat-card-actions>
                         
                       </mat-card>

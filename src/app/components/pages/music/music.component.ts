@@ -64,7 +64,7 @@ export class MusicComponent implements OnInit {
         console.log(this.cols)
       }
       else if (breakpoints[Breakpoints.HandsetLandscape]) {
-        this.hideMobileView = false
+        this.hideMobileView = true
         this.cols = this.gridByBreakpoint.sm
         console.log("screens matches HandsetLandscape");
         console.log(this.cols)
