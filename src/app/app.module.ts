@@ -22,6 +22,9 @@ import { MusicComponent } from './components/pages/music/music.component';
 import { CarouselComponent } from './components/pages/home/carousel/carousel.component';
 import { PrivacyComponent } from './components/pages/static/privacy/privacy.component';
 import { ContactusComponent } from './components/pages/static/contactus/contactus.component';
+import { FaqComponent } from './components/pages/static/faq/faq.component';
+import { TermsComponent } from './components/pages/static/terms/terms.component';
+import { CookiesComponent } from './components/pages/static/cookies/cookies.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { ContactusComponent } from './components/pages/static/contactus/contactu
     MusicComponent,
     CarouselComponent,
     PrivacyComponent,
-    ContactusComponent
+    ContactusComponent,
+    FaqComponent,
+    TermsComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,
