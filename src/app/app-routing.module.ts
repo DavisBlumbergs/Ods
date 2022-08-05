@@ -6,6 +6,9 @@ import { EventsComponent } from './components/pages/events/events.component';
 import { MusicComponent } from './components/pages/music/music.component';
 import { PrivacyComponent } from './components/pages/static/privacy/privacy.component';
 import { ContactusComponent } from './components/pages/static/contactus/contactus.component';
+import { FaqComponent } from './components/pages/static/faq/faq.component';
+import { TermsComponent } from './components/pages/static/terms/terms.component';
+import { CookiesComponent } from './components/pages/static/cookies/cookies.component';
 
 
 const desktop_routes: Routes = [
@@ -16,6 +19,9 @@ const desktop_routes: Routes = [
   {path: 'music', component: MusicComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'contactus', component: ContactusComponent},
+  {path: 'faq', component: FaqComponent},
+  {path: 'terms', component: TermsComponent},
+  {path: 'cookies', component: CookiesComponent},
 
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
   

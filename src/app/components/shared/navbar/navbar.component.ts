@@ -8,12 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  public isMenuOpen: boolean = false;
-
-  public onSidenavClick(): void {
-    this.isMenuOpen = false;
-  }
-
   hideMobileView = true
 
   cols = 0

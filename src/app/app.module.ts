@@ -1,16 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FormsModule } from '@angular/forms';
-
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-
-import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav'
-import { MatButtonModule } from '@angular/material/button'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,10 +15,6 @@ import { MusicComponent } from './components/pages/music/music.component';
 import { CarouselComponent } from './components/pages/home/carousel/carousel.component';
 import { PrivacyComponent } from './components/pages/static/privacy/privacy.component';
 import { ContactusComponent } from './components/pages/static/contactus/contactus.component';
-import { FaqComponent } from './components/pages/static/faq/faq.component';
-import { TermsComponent } from './components/pages/static/terms/terms.component';
-import { CookiesComponent } from './components/pages/static/cookies/cookies.component';
-
 
 @NgModule({
   declarations: [
@@ -37,22 +26,14 @@ import { CookiesComponent } from './components/pages/static/cookies/cookies.comp
     MusicComponent,
     CarouselComponent,
     PrivacyComponent,
-    ContactusComponent,
-    FaqComponent,
-    TermsComponent,
-    CookiesComponent
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatCardModule,
-    FormsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

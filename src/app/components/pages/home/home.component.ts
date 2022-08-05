@@ -1,6 +1,5 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +7,6 @@ import { MatMenuTrigger } from '@angular/material/menu';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-
-  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
-
-  public isMenuOpen: boolean = false;
-
-  public onSidenavClick(): void {
-    this.isMenuOpen = false;
-  }
-
-  @ViewChild(MatMenuTrigger)
-  trigger!: MatMenuTrigger;
-
-  someMethod() {
-    this.trigger.openMenu();
-  }
 
   hideMobileView = true
 
@@ -39,16 +23,6 @@ export class HomeComponent implements OnInit {
   constructor(private responsive: BreakpointObserver) { }
 
   ngOnInit(): void {
-
-    this.slides[0] = {
-      src: '../../../../assets/images/icons/YouTube_Icon.png',
-    };
-    this.slides[1] = {
-      src: '../../../../assets/images/icons/YouTube_Icon.png',
-    }
-    this.slides[2] = {
-      src: '../../../../assets/images/icons/YouTube_Icon.png',
-    }
 
     this.responsive.observe([
       Breakpoints.TabletPortrait,
@@ -86,10 +60,6 @@ export class HomeComponent implements OnInit {
 
     });
 
-  }
-
-  onItemChange($event: any): void {
-    console.log('Carousel onItemChange', $event);
   }
 
 }
